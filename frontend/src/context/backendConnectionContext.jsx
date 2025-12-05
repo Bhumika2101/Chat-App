@@ -23,11 +23,13 @@ export const BackendConnectionProvider = ({ children }) => {
       // In development, Vite proxy handles /api routes
       // In production, we need the full URL
       const isDev = import.meta.env.DEV;
-      const healthUrl = isDev
-        ? "/api/health"
-        : `${
-            import.meta.env.VITE_API_URL || "http://localhost:8000"
-          }/api/health`;
+
+      // Remove trailing slash from API URL to prevent double slashes
+      const apiUrl = (
+        import.meta.env.VITE_API_URL || "http://localhost:8000"
+      ).replace(/\/$/, "");
+
+      const healthUrl = isDev ? "/api/health" : `${apiUrl}/api/health`;
 
       const response = await fetch(healthUrl, {
         method: "GET",
