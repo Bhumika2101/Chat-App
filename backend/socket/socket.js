@@ -5,10 +5,19 @@ import express from "express";
 const app = express();
 
 const server = http.createServer(app);
+
+// Allow multiple origins for Socket.io
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://realsync-eight.vercel.app",
+  "https://realchat-seven.vercel.app",
+  process.env.FRONTEND_URL,
+].filter(Boolean);
+
 const io = new Server(server, {
-  pingTimeout: 60000, // Add timeout settings
+  pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:5173",
+    origin: allowedOrigins,
     methods: ["GET", "POST"],
     credentials: true,
     allowedHeaders: ["Content-Type"],
