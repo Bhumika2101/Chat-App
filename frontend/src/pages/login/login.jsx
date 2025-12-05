@@ -13,9 +13,9 @@ function login() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center min-w-96 mx-auto">
-      <div className="w-full p-6 rounded-lg shadow-[0_10px_25px_rgba(0,0,0,0.45),0_0_15px_rgba(255,255,255,0.1)] bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 border border-gray-700">
-        <h1 className="text-3xl font-semibold text-center text-white">
+    <div className="flex flex-col items-center justify-center w-full max-w-md mx-auto px-4">
+      <div className="w-full p-4 sm:p-6 rounded-lg shadow-[0_10px_25px_rgba(0,0,0,0.45),0_0_15px_rgba(255,255,255,0.1)] bg-gray-800 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 border border-gray-700">
+        <h1 className="text-2xl sm:text-3xl font-semibold text-center text-white">
           Login
           <span className="text-blue-400"> ChatApp</span>
         </h1>

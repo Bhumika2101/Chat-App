@@ -63,18 +63,18 @@ function messageInput() {
   }, []);
 
   return (
-    <form className="px-4 my-3" onSubmit={handleSubmit}>
+    <form className="px-2 sm:px-4 py-2 sm:py-3" onSubmit={handleSubmit}>
       <div className="w-full relative">
         <input
           type="text"
-          className="border text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
+          className="border text-sm sm:text-base rounded-lg block w-full p-2 sm:p-2.5 pr-10 sm:pr-12 bg-gray-700 border-gray-600 text-white placeholder-gray-400 focus:border-blue-500 focus:outline-none"
           placeholder="Send a message"
           value={message}
           onChange={handleTyping}
         />
         <button
           type="submit"
-          className="absolute inset-y-0 end-0 flex items-center pe-3 text-blue-400 hover:text-blue-300"
+          className="absolute inset-y-0 end-0 flex items-center pe-2 sm:pe-3 text-blue-400 hover:text-blue-300"
         >
           {loading ? (
             <span className="loading loading-spinner"></span>

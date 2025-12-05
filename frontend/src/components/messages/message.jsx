@@ -18,12 +18,12 @@ const message = ({ message }) => {
   return (
     <div className={`chat ${chatClassName}`}>
       <div className="chat-image avatar">
-        <div className="w-10 rounded-full ring-2 ring-gray-600">
+        <div className="w-8 sm:w-10 rounded-full ring-2 ring-gray-600">
           <img src={profilePic} alt="Tailwind CSS chat bubble component" />
         </div>
       </div>
       <div
-        className={`chat-bubble text-white ${
+        className={`chat-bubble text-white text-sm sm:text-base max-w-[85%] sm:max-w-md ${
           bubbleBgColor ? bubbleBgColor : "bg-gray-700"
         } ${shakeClass}`}
       >

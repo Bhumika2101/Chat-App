@@ -28,11 +28,31 @@ function messageContainer() {
         <NoChatSelected />
       ) : (
         <>
-          <div className="bg-gray-700 px-4 py-3 mb-2 border-b border-gray-600">
+          <div className="bg-gray-700 px-3 md:px-4 py-3 mb-2 border-b border-gray-600">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <span className="text-gray-300">To : </span>
-                <span className="text-white font-bold">
+                {/* Back button for mobile */}
+                <button
+                  className="md:hidden text-gray-300 hover:text-white mr-2"
+                  onClick={() => setSelectedConversation(null)}
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+                <span className="text-gray-300 hidden sm:inline">To : </span>
+                <span className="text-white font-bold text-sm md:text-base">
                   {selectedConversation.fullName}
                 </span>
                 <div

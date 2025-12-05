@@ -17,8 +17,8 @@ function conversation({ conversation, emoji, lastIdx }) {
                 `}
         onClick={() => setSelectedConversation(conversation)}
       >
-        <div className="relative">
-          <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-gray-600">
+        <div className="relative flex-shrink-0">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full overflow-hidden ring-2 ring-gray-600">
             <img
               src={conversation.profilePic}
               alt="user avatar"
@@ -27,15 +27,17 @@ function conversation({ conversation, emoji, lastIdx }) {
           </div>
           {/* Custom online/offline status indicator */}
           <div
-            className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full border-2 border-gray-800"
+            className="absolute bottom-0 right-0 w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rounded-full border-2 border-gray-800"
             style={{ backgroundColor: isOnline ? "#22c55e" : "#ef4444" }}
             title={isOnline ? "Online" : "Offline"}
           ></div>
         </div>
-        <div className="flex flex-col flex-1">
-          <div className="flex gap-3 justify-between items-center">
-            <div className="flex flex-col">
-              <p className="font-bold text-white">{conversation.fullName}</p>
+        <div className="flex flex-col flex-1 min-w-0">
+          <div className="flex gap-2 sm:gap-3 justify-between items-center">
+            <div className="flex flex-col min-w-0 flex-1">
+              <p className="font-bold text-white text-sm sm:text-base truncate">
+                {conversation.fullName}
+              </p>
               {isTyping && (
                 <p className="text-xs text-green-400 italic">typing...</p>
               )}
