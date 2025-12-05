@@ -45,11 +45,20 @@ app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
 // --------------------
-// Serve frontend
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
+// Serve frontend (only in production if frontend is built)
+if (process.env.NODE_ENV === "production") {
+  const frontendDistPath = path.join(__dirname, "frontend", "dist");
+
+  // Check if frontend dist folder exists
+  import("fs").then((fs) => {
+    if (fs.existsSync(frontendDistPath)) {
+      app.use(express.static(frontendDistPath));
+      app.get("*", (req, res) => {
+        res.sendFile(path.join(frontendDistPath, "index.html"));
+      });
+    }
+  });
+}
 
 // --------------------
 // Start server AND connect to MongoDB
