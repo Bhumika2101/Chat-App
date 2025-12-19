@@ -172,7 +172,7 @@ Update UI with green/red indicators
 
 ### Step 1: Clone the Repository
 ```bash
-git clone https://github.com/your-username/chat-app.git
+git clone https://github.com/Bhumika2101/chat-app.git
 cd chat-app
 ```
 
@@ -788,9 +788,9 @@ This project is licensed under the ISC License.
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/your-profile)
-- Email: your.email@example.com
+- GitHub: [@Bhumika2101](https://github.com/Bhumika2101)
+- LinkedIn: [Bhumika Salunkhe](https://www.linkedin.com/in/bhumika-salunkhe-02263725b/)
+- Email: bhumikasalunkhe283@gmail.com
 
 ---
 
@@ -807,7 +807,7 @@ This project is licensed under the ISC License.
 
 ## 📞 Support
 
-For support, email your.email@example.com or open an issue in the GitHub repository.
+For support, email bhumikasalunkhe283@gmail.com or open an issue in the GitHub repository.
 
 ---
 
@@ -817,5 +817,5 @@ If you like this project, please give it a ⭐ on GitHub!
 
 ---
 
-**Built with ❤️ using MERN Stack**
+**Built with ❤️ by Bhumika Salunkhe**
 
